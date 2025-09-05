@@ -1,20 +1,21 @@
-Name,Type,Theme,Region,Rank,Deadline,Deadline_Note,Source,Deadline_dt,Deadline_Display
+﻿Name,Type,Theme,Region,Rank,Deadline,Deadline_Note,Source,Deadline_dt,Deadline_Display
 ACM Transactions on Computer-Human Interaction (TOCHI),Journal,HCI; Usability; Human Factors; Human-centred Security,Global,Q1,,Rolling submissions,https://dl.acm.org/journal/tochi,,Rolling submissions
 International Journal of Human-Computer Interaction (IJHCI),Journal,HCI; Human Factors; Socio-technical,Global,Q1,,Rolling submissions,https://www.tandfonline.com/journals/hihc20,,Rolling submissions
 Computers in Human Behavior (CHB),Journal,HCI; Cyberpsychology; Behavior; Privacy,Global,Q1,,Rolling submissions,https://www.sciencedirect.com/journal/computers-in-human-behavior,,Rolling submissions
 "Technology, Mind, and Behavior",Journal,HCI; Psychology; Socio-technical; Ethics,Global,Q1,,Rolling submissions,https://tmb.apaopen.org/,,Rolling submissions
 IEEE Transactions on Human-Machine Systems,Journal,Human-Machine Interaction; HCI; Safety; Security,Global,Q1,,Rolling submissions,https://www.ieeesmc.org/publications/transactions-on-human-machine-systems/,,Rolling submissions
 AI & Society,Journal,Socio-technical; Ethics; Policy; Human Values,Global,Q1,,Rolling submissions,https://link.springer.com/journal/146,,Rolling submissions
-SOUPS 2025,Conference,Usable Security; Privacy; HCI; Studies; Fieldwork,Global,A,2025-02-13,Full papers (AoE). Often has abstract/registration a week earlier.,https://www.usenix.org/conference/soups2025,2025-02-13,2025-02-13
-USEC 2025 (co-located with NDSS),Conference,Usable Security; Privacy,Global,A,2025-02-24,Workshop date; submission earlier per CFP.,https://www.ndss-symposium.org/,2025-02-24,2025-02-24
-EuroUSEC 2025,Conference,Usable Security; Privacy; HCI,Europe,A,2025-05-09,Full paper deadline (AoE).,https://www.usablesecurity.net/,2025-05-09,2025-05-09
-ACM CCS 2025,Conference,Security; Privacy; Socio-technical; Measurements; User Studies,Global,A*,2025-04-14,Full papers; usually abstract due earlier.,https://www.sigsac.org/ccs.html,2025-04-14,2025-04-14
-NDSS 2026,Conference,Security; Privacy; Systems; Human Factors,Global,A*,2025-08-06,Full papers; abstract due months earlier.,https://www.ndss-symposium.org/,2025-08-06,2025-08-06
-USENIX Security 2026 (Cycle 1),Conference,Security; Privacy; Measurements; Human-centered Security,Global,A*,2025-08-26,Cycle-based deadlines; registration often 1 week before.,https://www.usenix.org/conferences,2025-08-26,2025-08-26
-IEEE Symposium on Security and Privacy (Oakland) 2026,Conference,Security; Privacy; Human factors (subcommunity tracks),Global,A*,2025-11-13,One of the annual deadlines; check CFP for cycles.,https://www.ieee-security.org/TC/SP-Index.html,2025-11-13,2025-11-13
-IEEE EuroS&P 2026,Conference,Security; Privacy; Usability,Europe,A,2025-11-20,Typical fall deadline; confirm on site.,https://www.ieee-security.org/,2025-11-20,2025-11-20
-ASIACCS 2026,Conference,Security; Privacy,Asia-Pacific,A,2025-12-12,Full papers; abstract due earlier.,https://asiaccs2026.org/,2025-12-12,2025-12-12
-CHI 2026 (Full Papers),Conference,HCI; Human-centred Security; Privacy; UX,Global,A*,2025-09-11,Full papers; metadata due ~1 week before; revise-and-resubmit cycle.,https://chi2026.acm.org/,2025-09-11,2025-09-11
-CHI 2026 (Workshops – proposals),Conference,Workshops; HCI; Security/Privacy topics welcome,Global,A*,2025-10-02,Workshop organizer proposals.,https://chi2026.acm.org/,2025-10-02,2025-10-02
-CHI 2026 (Revised resubmission),Conference,HCI; Human-centred Security; Privacy; UX,Global,A*,2025-12-04,Revision deadline for conditionally accepted papers.,https://chi2026.acm.org/,2025-12-04,2025-12-04
-CHI 2026 (Posters/Demos),Conference,HCI; Late-breaking work; Demos,Global,A*,2026-01-22,Posters/Demos deadlines vary by year; confirm CFP.,https://chi2026.acm.org/,2026-01-22,2026-01-22
+SOUPS 2025,Conference,Usable Security; Privacy; HCI; Studies; Fieldwork,Global,B,02-13-25,Full papers (AoE). Often has abstract/registration a week earlier.,https://www.usenix.org/conference/soups2025,02-13-25,02-13-25
+USEC 2025 (co-located with NDSS),Conference,Usable Security; Privacy,Global,A,02-24-25,Workshop date; submission earlier per CFP.,https://www.ndss-symposium.org/,02-24-25,02-24-25
+EuroUSEC 2025,Conference,Usable Security; Privacy; HCI,Europe,A,05-09-25,Full paper deadline (AoE).,https://www.usablesecurity.net/,05-09-25,05-09-25
+ACM CCS 2025,Conference,Security; Privacy; Socio-technical; Measurements; User Studies,Global,A*,04-14-25,Full papers; usually abstract due earlier.,https://www.sigsac.org/ccs.html,04-14-25,04-14-25
+NDSS 2026,Conference,Security; Privacy; Systems; Human Factors,Global,A,08-06-25,Full papers; abstract due months earlier.,https://www.ndss-symposium.org/,08-06-25,08-06-25
+USENIX Security 2026 (Cycle 1),Conference,Security; Privacy; Measurements; Human-centered Security,Global,A*,08-26-25,Cycle-based deadlines; registration often 1 week before.,https://www.usenix.org/conferences,08-26-25,08-26-25
+IEEE Symposium on Security and Privacy (Oakland) 2026,Conference,Security; Privacy; Human factors (subcommunity tracks),Global,A,11-13-25,One of the annual deadlines; check CFP for cycles.,https://www.ieee-security.org/TC/SP-Index.html,11-13-25,11-13-25
+IEEE EuroS&P 2026,Conference,Security; Privacy; Usability,Europe,A,11-20-25,Typical fall deadline; confirm on site.,https://www.ieee-security.org/,11-20-25,11-20-25
+ASIACCS 2026,Conference,Security; Privacy,Asia-Pacific,A,12-12-25,Full papers; abstract due earlier.,https://asiaccs2026.org/,12-12-25,12-12-25
+CHI 2026 (Full Papers),Conference,HCI; Human-centred Security; Privacy; UX,Global,A*,09-11-25,Full papers; metadata due ~1 week before; revise-and-resubmit cycle.,https://chi2026.acm.org/,09-11-25,09-11-25
+CHI 2026 (Workshops – proposals),Conference,Workshops; HCI; Security/Privacy topics welcome,Global,A*,10-02-25,Workshop organizer proposals.,https://chi2026.acm.org/,10-02-25,10-02-25
+CHI 2026 (Revised resubmission),Conference,HCI; Human-centred Security; Privacy; UX,Global,A*,12-04-25,Revision deadline for conditionally accepted papers.,https://chi2026.acm.org/,12-04-25,12-04-25
+CHI 2026 (Posters/Demos),Conference,HCI; Late-breaking work; Demos,Global,A*,01-22-26,Posters/Demos deadlines vary by year; confirm CFP.,https://chi2026.acm.org/,01-22-26,01-22-26
+
