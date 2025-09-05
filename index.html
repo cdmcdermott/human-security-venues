@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Human-Centred Security Venues</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/datatables.net-dt/css/jquery.dataTables.min.css" />
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/datatables.net/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; margin: 2rem; }
+    .controls { display: flex; gap: 1rem; margin-bottom: 1rem; flex-wrap: wrap; }
+    select, input { padding: .4rem; }
+    table { width: 100%; }
+  </style>
+</head>
+<body>
+  <h1>Human-Centred Security — Venues & Deadlines</h1>
+  <p>Filter by Type/Theme, search, and click headers to sort. Data source: CSV in this repo.</p>
+
+  <div class="controls">
+    <label>Type: <select id="typeFilter"><option value="">(any)</option></select></label>
+    <label>Theme: <select id="themeFilter"><option value="">(any)</option></select></label>
+    <label>After: <input type="date" id="afterDate" /></label>
+    <label>Before: <input type="date" id="beforeDate" /></label>
+  </div>
+
+  <table id="venues" class="display"></table>
+
+  <script>
+    const CSV_URL = "human_centred_security_venues.csv";
+
+    function uniqueSorted(arr){ return Array.from(new Set(arr.filter(Boolean))).sort((a,b)=>a.localeCompare(b)); }
+
+    Papa.parse(CSV_URL, {
+      download: true, header: true, complete: (results) => {
+        const data = results.data;
+        data.forEach(row => {
+          row._themes = (row.Theme || "").split(";").map(s=>s.trim()).filter(Boolean);
+          row._deadline_display = row.Deadline_Display || row.Deadline || row.Deadline_Note || "";
+          row._deadline_dt = (row.Deadline && /^\d{4}-\d{2}-\d{2}$/.test(row.Deadline)) ? row.Deadline : null;
+        });
+
+        const types  = uniqueSorted(data.map(d => d.Type));
+        const themes = uniqueSorted(data.flatMap(d => d._themes));
+        for (const t of types)  $('#typeFilter').append(new Option(t, t));
+        for (const th of themes) $('#themeFilter').append(new Option(th, th));
+
+        const table = $('#venues').DataTable({
+          data,
+          columns: [
+            { title: "Name", data: "Name",
+              render: (d,_,row)=> row.Source ? `<a href="${row.Source}" target="_blank" rel="noopener">${d}</a>` : d },
+            { title: "Type", data: "Type" },
+            { title: "Theme", data: "Theme" },
+            { title: "Region", data: "Region" },
+            { title: "Rank", data: "Rank" },
+            { title: "Deadline", data: "_deadline_display" },
+            { title: "Notes", data: "Deadline_Note" }
+          ],
+          order: [[5, 'asc']],
+          pageLength: 25,
+          deferRender: true
+        });
+
+        $.fn.dataTable.ext.search.push(function(_settings, _data, idx){
+          const row = table.row(idx).data(); if (!row) return true;
+          const typeVal  = $('#typeFilter').val();
+          if (typeVal && row.Type !== typeVal) return false;
+          const themeVal = $('#themeFilter').val();
+          if (themeVal && !row._themes.includes(themeVal)) return false;
+          const after  = $('#afterDate').val();
+          const before = $('#beforeDate').val();
+          const rd = row._deadline_dt;
+          if (after  && rd && rd < after)  return false;
+          if (before && rd && rd > before) return false;
+          return true;
+        });
+
+        $('#typeFilter, #themeFilter, #afterDate, #beforeDate').on('change', () => table.draw());
+      }
+    });
+  </script>
+</body>
+</html>
