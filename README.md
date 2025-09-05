@@ -3,7 +3,7 @@
 This repository hosts an **interactive table of publication venues** (Q1 journals and A/B ranked conferences) relevant to *human-centred security* and *socio-technical security research*.
 
 👉 View it live on GitHub Pages (after enabling Pages in repo settings):  
-`https://<your-username>.github.io/human-security-venues/`
+`https://cdmcdermott.github.io/human-security-venues/`
 
 ---
 
